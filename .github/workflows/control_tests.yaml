@@ -3,7 +3,7 @@ on: push
 jobs:
   qa:
     name: Check tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #ubuntu-XX-XX
     steps:
       - name: Checkout on master
         uses: actions/checkout@v3
@@ -20,7 +20,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest
+          pytest tests
 
       - name: Run flake8
         uses: py-actions/flake8@v2
